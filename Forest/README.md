@@ -1,2 +1,0 @@
-I wanted to add moving cluds to the tree scene I created in Lab 2. I was able to make a cloud that follows the mouseY as it goes across the screen.
-I also tried making multiple clouds but it didn't work out.
