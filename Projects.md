@@ -2,8 +2,6 @@
 
 ## Sketchbook 1
 
-## Sketchbook 2
+[DrawingTools](./DrawingTools/)
 
 ## Sketchbook 3
-
-[DrawingTools](.Lab5)
