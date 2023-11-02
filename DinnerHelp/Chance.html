@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://rednoise.org/rita/p5.rita.js"></script>
+</head>
+
+<body>
+    <script>
+        let typeOptions = [
+                "Skillet",
+                "Air-Fry",
+                "Bake",
+                "Roast",
+                "Pan",
+                "Boil",
+                "Microwave",
+            ];
+
+            let dinnerOptions = [
+                "Spaghetti and Meatballs",
+                "Chicken Wings",
+                "Salmon",
+                "Pizza",
+                "Steak",
+                "Burgers",
+                "Chicken Breast",
+                "Pork Chops",
+                "Fried Rice with Steak",
+                "Fried Rice with Egg",
+                "Sandwitch",
+                "Fettucine",
+                "LeftOvers",
+            ];
+
+            let sideDishOptions = [
+                "Garlic Bread",
+                "Corn",
+                "French Fries",
+                "Mashed Potatoes",
+                "Steamed Vegetables",
+                "Rice",
+                "Nothing",
+                "Curly Fries",
+                "Eggs",
+                "Bacon",
+            ];
+
+            var mode;
+
+            function setup() {
+                mode = 0;
+                createCanvas(500, 300);
+                noLoop();
+            }
+
+            function draw() {
+                clear();
+                if (mode == 0) {
+                    background("lightgreen")
+                    textSize(30);
+                    text("What's For Dinner?", 110, 120);
+                    textSize(20);
+                    text("Press Enter then Click", 140, 150);
+                    ellipse(250, 240, 100, 40);
+                    ellipse(250, 240, 50, 20);
+                    textSize(80);
+                    text("?", 230, 240);
+                }
+                if (mode == 1) {
+                    background("lightblue");
+                    textSize(30);
+                    textAlign(CENTER, CENTER);
+                    fill(0);
+
+                    // Display the title
+                    text("Today we have...", width / 2, 70);
+
+                    // Pick random dinner and side dish suggestions
+                    let typeSuggestion = random(typeOptions);
+                    let dinnerSuggestion = random(dinnerOptions);
+                    let sideDishSuggestion = random(sideDishOptions);
+
+                    text("How?: " + typeSuggestion, width / 2, height / 2 + 30);
+                    text(dinnerSuggestion, width / 2, height / 3 + 50);
+                    text("Side Dish: " + sideDishSuggestion, width / 2, height / 2 + 60);
+
+                }
+            }
+
+            function keyPressed() {
+                if (keyCode === ENTER) {
+                    mode = 1;
+                }
+            }
+
+            function mouseClicked() {
+                redraw();
+            }
+    </script>
+</body>
+
+</html>
