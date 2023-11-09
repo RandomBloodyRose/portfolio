@@ -13,3 +13,7 @@
 [Dinner Help](./DinnerHelp/)
 
 <iframe src="./DinnerHelp"></iframe>
+
+[Spider Apple](./Lab7/)
+
+<iframe src="./Lab7"></iframe>
